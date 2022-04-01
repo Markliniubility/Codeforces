@@ -19,7 +19,7 @@ void solve() {
     for (int i = 0; i < 26; i++) last[i] = 0;
 
     for (int i = 1; i <= len; i++) {
-        dp[i] = dp[i - 1];
+        dp[i] = dp[i - 1]; 
         char cur = s[i - 1];
         int prev = last[cur - 'a'];
         if (prev != 0) {
