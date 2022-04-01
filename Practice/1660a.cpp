@@ -1,9 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <array>
-#include <algorithm>
 #include <bits/stdc++.h>
-#include <math.h>
 using namespace std;
 
 void solve() {
