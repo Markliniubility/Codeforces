@@ -3,6 +3,9 @@ using namespace std;
 #define endl '\n'
 #define ll long long
 
+// THIS IS NOT an AC solution
+// because 
+
 const int N=3000010;
 const ll mod=998244353;
 const ll inf=2000000000000000001;

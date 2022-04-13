@@ -22,7 +22,7 @@ int p[N], q[N];
 ll measure(vector<vector<ll>> stones, vector<vector<ll>> rs, ll W) {
     ll res = 0;
     for (ll i = 0; i < stones.size(); i++) {
-        if (stones[i][0] >= W) {
+        if (stones[i][0] <= W) {
             p[i + 1] = p[i] + 1;
             q[i + 1] = q[i] + stones.at(i).at(1);
         } else {
@@ -77,6 +77,7 @@ int main() {
         cin >> r.at(0) >> r.at(1);
         rs.at(i) = r;
     }
+    p[0] = q[0] = 0;
 
     while (left < right - 1) {
         ll mid = left + (right - left) / 2;
