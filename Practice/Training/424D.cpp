@@ -15,7 +15,6 @@ int main() {
     cin >> s1 >> s2 >> d;
     deg[s1]++;
     deg[s2]++;
-    
   }
   return 0;
 }
