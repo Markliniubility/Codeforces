@@ -34,6 +34,7 @@ int main() {
   printf("%.6lf",dp[total]*100);
   return 0;
 }
+
 // int main() {
 //   ios::sync_with_stdio(false);
 //   cin.tie(nullptr);
