@@ -79,7 +79,10 @@
         "ratio": "cpp",
         "sstream": "cpp",
         "string": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "random": "cpp",
+        "valarray": "cpp",
+        "map": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

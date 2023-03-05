@@ -9,15 +9,21 @@ int x[40];
 int n, m;
 int ans = 0;
 
-void gauss() {
+bool gauss() {
   // eliminate col 1 to col n
   for (int k = 1; k <= n; k++) {
+    bool empty = true;
     for (int i = k; i <= m; i++) {
       if (a[i][k]) {
         if (i != k) swap(a[i], a[k]);
         ans = max(ans, i);
+        empty = false;
         break;
       }
+    }
+
+    if (empty) {
+      return empty;
     }
 
     for (int i = k + 1; i <= m; i++) {
@@ -38,6 +44,8 @@ void gauss() {
       }
     }
   }
+
+  return false;
 }
 
 void printAns(int i) {
@@ -66,14 +74,8 @@ int main() {
     cin >> a[i][n + 1];
   }
   
-  gauss();
-  bool empty = true;
-  for (int i = 1; i <= n; i++) {
-    if (a[n][i]) {
-      empty = false;
-      break;
-    }
-  }
+  bool empty = gauss();
+
   if (empty) {
     cout << "Cannot Determine" << endl;
     return 0;
